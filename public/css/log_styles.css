@@ -1,0 +1,235 @@
+/* TODO: Setting up the project starts */
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-y: visible;
+}
+
+
+* {
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+    overflow: hidden;            
+}
+
+:root {
+    --blue: #3b5998;
+    --blue-focues: #80dcdc;
+    --white:#fafbfc;
+    --grey: #e6e9ed;
+    --letters-color: #7a8189;
+    --orange: #f04e23;
+}
+
+.main {
+    background: var(--white);
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* FIXME: Setting up the project ends */
+
+
+/* TODO: Sign up starts */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sign__up {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 5rem 1.5rem;
+}
+
+.fa-fire {
+    font-size: 4rem;
+    color: var(--orange);
+}
+
+.logo span {
+    font-size: 2.5rem;
+}
+
+.apply {
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook {
+    background: var(--blue);
+    cursor: pointer;
+}
+
+.fa-facebook {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.facebook span {
+    font-size: 1.5rem;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+input {
+    font-size: 1.5rem;
+    color: var(--letters-color);
+}
+
+input::placeholder {
+    text-transform: capitalize;
+}
+
+.input__container {
+    background: #fff;
+    display: flex;
+    justify-content: initial;
+    gap: 1.2rem;
+    border: .1rem solid var(--letters-color);
+    transition: all .2s linear;
+}
+
+.input__container:hover {
+    border-color: var(--blue-focues);
+}
+
+.input__container i {
+    font-size: 3rem;
+    color: var(--letters-color);
+}
+
+.button__container {
+    background: green;
+}
+
+.button__container button {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.account {
+    font-size: 1.5rem;
+}
+
+.account a {
+    color: var(--blue);
+}
+
+.copy {
+    font-size: 1.2rem;
+    color: var(--letters-color);
+}
+
+.image__container {
+    display: none;
+}
+
+.forgot {
+    margin-bottom: 0.1rem;
+    font-weight: bold;
+}
+
+/* FIXME: Sign up ends */
+
+/* TODO: Media queries start */
+
+@media screen and (min-width: 400px) {
+
+    /* TODO: Sign up adjsutments */
+
+    form {
+        padding: 5rem 12%;
+    }
+
+    /* FIXME: Sign up adjsutments end */
+    
+}
+
+@media screen and (min-width:750px) {
+
+    /* TODO: Sign up adjsutments */
+
+
+    .image__container {
+        display: block;
+    }
+
+    form {
+        flex: .45 .45;
+    }
+
+    .image__container {
+        flex: .55 .55;
+        height: 100%;
+    }
+
+    .image__container img {
+        height: 100%;
+    }
+
+    /* FIXME: Sign up adjsutments end */
+    
+}
+
+@media screen and (min-width: 900px) { 
+
+    /* TODO: Sign up adjsutments */
+
+    form {
+        flex: .4 .4;
+    }
+
+    .image__container {
+        flex: .6 .6;
+    }
+
+    /* FIXME: Sign up adjsutments end */
+    
+}
+
+@media screen and (min-width:1280px) {
+
+    /* TODO: Sign up adjsutments */
+
+    form {
+        flex: .25 .25;
+    }
+
+    .image__container {
+        flex: .75 .75;
+    }
+
+    /* FIXME: Sign up adjsutments end */
+    
+}

@@ -1,0 +1,1438 @@
+/* TODO: Setting up the project starts */
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-y: visible;
+}
+
+
+* {
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+    overflow: hidden;            
+}
+
+ul {
+    list-style-type: none;
+}
+
+:root {
+    --main-color: #ffffff;
+    --second-color: #7cdbdb;
+    --third-color: #f04e23;
+    --home-header-color: #fefefe;
+    --other-headers-color: #4c5156;
+    --text-color: #95979b;
+    --header-height: 7rem;
+    --logo-name-color: #0e4455;
+    --horizontal-grobal-padding: 5%;
+    --question-color: #bed1ff;
+    --answer-color: #f0f4ff;
+    --question-letters-color: #fffdff;
+    --answer-letters-color: #4d4f4c;
+    --answer-question-border-color: #cfd3d6;
+    --button-hover-color: #9c2100;
+}
+
+p {
+    max-width: 40ch;
+    color: var(--other-headers-color);
+    font-size: 2rem;
+}
+
+.main {
+    margin-top: var(--header-height);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main__button {
+    background: var(--third-color);
+    color: var(--home-header-color);
+}
+
+.regular__button {
+    background: var(--main-color);
+    color: var(--other-headers-color);
+    border: 1px solid rgba(0,0,0,0.3)
+}
+
+/* FIXME: Setting up the project ends */
+
+/* TODO: Header starts */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: var(--header-height);
+    background: var(--main-color);
+    padding: 0 1.5rem 0 1.2rem;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.fa-fire {
+    color: var(--third-color);
+    font-size: 5rem;
+}
+
+
+.center__center {
+    align-items: center;
+    justify-content: center;
+}
+
+.logo__container {
+    gap: 0.5rem;
+}
+
+.logo__name {
+    font-size: 2.2rem;
+    color: var(--logo-name-color);
+    font-weight: bolder;
+}
+
+.bars__container {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: var(--other-headers-color);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header__nav__bar__container {
+    position: absolute;
+    right: -110vw;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    transition: all .2s linear;
+}
+
+.header__nav__bar__container.active {
+    right: 0;
+}
+
+.less__brightness {
+    width: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.header__nav__bar__content {
+    background: var(--main-color);
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 100vw;
+}
+
+.close__and__nav__bar__container {
+    gap: 4.5rem;
+}
+
+.close__nav__bar__container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close__nav__bar__container span {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.fa-times {
+    font-size: 2.5rem;
+}
+
+.header__nav__bar__item, 
+.fa-times,
+.close__nav__bar__container span {
+    color: var(--other-headers-color);
+}
+
+.header__nav__bar__item {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+.header__nav__bar {
+    gap: 2rem;
+}
+
+.header__buttons__container {
+    gap: 1.5rem;
+}
+
+.deskop__item {
+    display: none;
+}
+
+.login__button {
+    display: none;
+}
+
+.home__content__container .button__container:hover {
+    background: var(--button-hover-color);
+}
+
+/* FIXME: Header ends */
+
+/* TODO: Home starts */
+
+.home {
+    background: url(../../public/images/small.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.home__content__container {
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1.5rem;
+    gap: 2rem;
+}
+
+.home__h1 {
+    color: var(--home-header-color);
+    font-size: 2.2rem;
+    text-transform: capitalize;
+}
+
+.home__content__container .button__container {
+    background: var(--third-color);
+    width: 18rem;
+    cursor: pointer;
+}
+
+.home__content__container .button {
+    color: var(--main-color);
+}
+
+.home__video__container {
+    height: 18rem;
+    background: url(../images/videoThumbnail.jpg);
+    background-repeat: no-repeat;
+    background-position: -240px -350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    max-width: 35rem;
+    transition: all .2s linear;
+}
+
+.home__video__container:hover {
+    box-shadow: inset 0 -40px 40px 0 rgba(240, 78, 35, 0.5), inset 10px 0 40px 0 rgba(240, 78, 35, 0.5);
+}
+
+.circle {
+    height: 7rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    background: rgba(0,0,0,0.6);
+    transition: all .2s linear;
+}
+
+.player {
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-left: 26px solid var(--main-color);
+    border-bottom: 13px solid transparent;
+    margin-left: 0.5rem;
+}
+
+.home__video__container:hover .circle {
+    background: var(--third-color);
+}
+
+.video__clicked {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    display: none;
+    z-index: 200;
+}
+
+.video__clicked.active {
+    display: flex;
+    align-items: center;
+}
+
+.video__clicked h2 {
+    font-size: 2rem;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    align-self: center;
+}
+
+
+.video__clicked .fa-times {
+    color: white;
+    position: inherit;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+}
+
+/* FIXME: Home ends */
+
+/* TODO: Home second part starts */
+
+.home__second {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.2rem;
+}
+
+.home__second__content {
+    padding: 8rem 0;
+}
+
+.home__second__content h2 {
+    font-size: 2.5rem;
+    color: var(--other-headers-color);
+}
+
+.home__second__content p {
+    margin-top: 4rem;
+}
+
+.home__second__square mark {
+    color: black;
+    font-weight: bold;
+}
+
+.home__second__square {
+    background: var(--second-color);
+    padding: 3rem;
+    align-self: center;
+    max-width: 50rem;
+}
+
+.actual__button {
+    font-size: 1.5rem;
+    color: var(--home-header-color);
+    background: var(--third-color);
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 550;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.actual__button:hover {
+    background: var(--button-hover-color);
+}
+
+
+.home__second__square .actual__button {
+    margin-top: 3rem;
+}
+
+/* FIXME: Home second part ends */
+
+/* TODO: Home third part starts */
+
+.home__third {
+    padding: 1rem var(--horizontal-grobal-padding);
+}
+
+.home__third__content {
+    background: var(--third-color);
+    padding: 3rem 1rem;
+    margin-top: -0.5rem;
+}
+
+.home__third__content h2,
+.home__third__content p {
+    color: var(--main-color);
+}
+
+.home__third__content h2 {
+    font-size: 3rem;
+}
+
+.home__third__image img {
+    width: 100%;
+    aspect-ratio: 1/0.8;
+}
+
+.home__third__content p {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+}
+
+/* FIXME: Home third part ends */
+
+/* TODO: Home fourth part starts */
+
+.home__fourth {
+    padding: 3rem var(--horizontal-grobal-padding);
+}
+
+.home__fourth__first__content {
+    background: #eee;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.home__fourth__first__content p {
+    color: var(--other-headers-color);
+    font-size: 3rem;
+}
+
+.home__fourth__content {
+    background: var(--second-color);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.home__fourth__content .actual__button {
+    white-space: nowrap;
+}
+
+.home__fourth__content mark {
+    color: black;
+    font-weight: bold;
+}
+
+.home__fourth__content p {
+    color: black;
+    font-size: 2rem;
+}
+
+/* FIXME: Home fourth part ends */
+
+/* TODO: Testimonial starts */
+
+.home__testimonial {
+    padding: 6rem var(--horizontal-grobal-padding);
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.home__testimonial h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.testimonial p {
+    font-size: 1.5rem;
+    padding: 6rem 1rem;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+    max-width: 30ch;
+}
+
+.testimonial__image {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    overflow: visible;
+    padding: 0 1rem;
+}
+
+.testimonial__image img {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    max-width: 2rem;
+    position: relative;
+    top: -3rem;
+    z-index: 150;
+}
+
+.image__informations .image__name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--other-headers-color);
+}
+
+.image__informations span {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: .5rem;
+    display: inline-block;
+}
+
+/* FIXME: Testimonial ends */
+
+/* TODO: Questions starts */
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem var(--horizontal-grobal-padding);
+    padding-bottom: 3rem;
+}
+
+.questions h2 {
+    font-size: 3rem;
+    color: var(--other-headers-color);
+}
+
+.answer {
+    padding: 3rem 1rem;
+    color: var(--answer-letters-color);
+    background: var(--answer-color);
+    font-size: 1.5rem;
+    max-width: initial;
+    display: none;
+}
+
+.answer.active {
+    display: block;
+}
+
+.answer,
+.question__container {
+    border: .1rem solid var(--answer-question-border-color);
+}
+
+.question__container h3 {
+    color: var(--other-headers-color);
+    font-size: 1.5rem;
+}
+
+.question__container.active h3,
+.question__container:hover h3 {
+    color: var(--question-letters-color);
+}
+
+.question__container.active, 
+.question__container:hover {
+    background: var(--question-color);
+}
+
+
+.show__answer {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--other-headers-color);
+    align-self: center;
+}
+
+.question__container.active .show__answer {
+    border-bottom: 10px solid var(--other-headers-color);
+    border-top: none;
+}
+
+.question__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 1rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+/* FIXME: Questions end */
+
+/* TODO: Home last section starts */
+
+.last__section {
+    padding: 5rem  var(--horizontal-grobal-padding);
+    background: var(--other-headers-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.last__section h2 {
+    color: var(--main-color);
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.last__section h2:nth-child(2) {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.last__section .actual__button {
+    margin-top: 1.5rem;
+}
+
+/* FIXME: Home last part ends */
+
+/* TODO: Footer starts */
+
+.footer {
+    padding: 10rem var(--horizontal-grobal-padding);
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.footer__decoration {
+    height: 1px;
+    background: var(--text-color);
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem 15rem;
+}
+
+.footer__nav__item {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.footer__nav__item:first-of-type {
+    margin-bottom: 1.5rem;
+    cursor: initial;
+}
+
+.footer__nav__item h2 {
+    font-size: 1.6rem;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.madeby {
+    margin-top: 2rem;
+}
+
+.madeby h2 {
+    font-size: 2rem;
+    color: var(--answer-letters-color);
+}
+
+.madeby .fa-heart {
+    color: var(--other-headers-color);
+}
+
+.madeby mark {
+    color: inherit;
+    border-bottom: .1rem solid var(--third-color);
+    display: inline-block;
+}
+
+.socialmedias i {
+    padding: 1rem;
+    background: var(--home-header-color);
+    border-radius: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.5rem;
+    color: var(--other-headers-color);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.socialmedias .fa-twitter:hover,
+.socialmedias .fa-facebook:hover,
+.socialmedias .fa-linkedin:hover {
+    color: dodgerblue;
+}
+
+.socialmedias .fa-youtube:hover {
+    color: red;
+}
+
+.socialmedias .fa-instagram:hover {
+    color: purple;
+}
+
+.socialmedias .fa-tiktok:hover {
+    color: rgb(240, 56, 240);
+}
+
+.socialmedias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.copyright h2 {
+    font-size: 1.6rem;
+    color: var(--other-headers-color);
+}
+
+.copy__information {
+    margin-top: 1.5rem;
+}
+
+.copy__information span {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.footer__logo .fa-fire {
+    color: var(--other-headers-color);
+    font-size: 2rem;
+}
+
+.footer__logo span {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: 24rem;
+}
+
+/* FIXME: Footer adjsutments end */
+
+/* TODO: Media queries start */
+
+@media screen and (min-width: 200px) {
+
+    /* TODO: Header ajdustments */
+
+    .bars__container {
+        display: block;
+    }
+
+    /* FIXME: Header adjustments end */
+    
+}
+
+@media screen and (min-width: 280px) {
+
+    /* TODO: Header adjustments */
+
+    .fa-bars {
+        font-size: 2.5rem;
+    }
+
+    .logo__name {
+        font-size: 3rem;
+    }
+
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home adjustments */
+
+    .home__h1 {
+        font-size: 2.7rem;
+    }
+
+    /* FIXME: Home adjustments end */
+
+    /* TODO: Home second part adjsutments end */
+
+    p {
+        font-size: 2.6rem;
+    }
+
+    .home__second__square {
+        padding: 5rem 2rem;
+    }
+
+    /* FIXME: Home second part adjustments end */
+
+    /* TODO: Testimonial adjustments */
+
+    .testimonial__image img {
+        max-width: 5rem;
+    }
+
+    .testimonial p {
+        padding: 6rem 2rem;
+    }
+
+    /* FIXME: Testimonial adjsutments end */
+
+    /* TODO: Question adjsutments */
+    
+    .answer,
+    .question__container {
+        padding: 3rem 2rem;
+    }
+
+    /* FIXME: Question adjustments end */
+
+    /* TODO: Footer adjsutments */
+
+    .footer__logo {
+        width: 18rem;
+    }
+
+    /* FIXME: Footer adjustments end */
+    
+}
+
+@media screen and (min-width: 350px) {
+
+    /* TODO: Header adjustments */
+
+    .header {
+        padding: 0 3rem 0 2rem;
+    }
+
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home adjustments */
+
+    .home {
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem var(--horizontal-grobal-padding);
+    }
+
+    .home__content__container {
+        padding: 0;
+    }
+
+    .home__video__container {
+        height: 20rem;
+    }
+
+    .home__h1 {
+        font-size: 3rem;
+    }
+
+    /* FIXME: Home adjustments end */
+
+    /* TODO: Home thrid part adjsutments */
+
+    .home__third__content {
+        padding: 4rem 3rem;
+    }
+
+    /* FIXME: Home third part adjsutments end */
+
+    /* TODO: Home fourth part adjsutments */
+    
+    .home__fourth__content,
+    .home__fourth__first__content {
+        padding: 3rem;
+    }
+
+    /* FIXME: Home fourth part adjustments end */
+
+    /* TODO: Testimonial adjustments */
+
+    .testimonial p {
+        padding: 9rem 3rem;
+        font-size: 2rem;
+    }
+ 
+    .testimonial__image img {
+        max-width: 10rem;
+        top: -5rem;  
+    }
+
+    .home__testimonial h2 {
+        font-size: 3rem;
+    }
+
+    /* FIXME: Testimonial adjustments end */
+
+    /* TODO: Question adjustments */
+
+    .question__container h3 {
+        color: var(--other-headers-color);
+        font-size: 2rem;
+    }
+
+    .answer {
+        font-size: 1.8rem;
+    }
+
+    /* FIXME: Question adjustments end */
+
+    /* TODO: Footer adjsutments */
+
+    .footer__logo {
+        width: 13rem;
+    }
+
+    /* FIXME: Footer adjustments end */
+    
+}
+
+@media screen and (min-width: 450px) {
+
+    
+    /* TODO: Header adjustments */
+
+    .less__brightness {
+        width: 25vw;
+        
+    }
+    
+    .header__nav__bar__content {
+        
+        width: 75vw;
+    }
+    
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home adjsutments */
+
+    .home__video__container {
+        height: 22rem;
+    }
+
+    /* FIXME: Home adjsutments end */
+
+    /* TODO: Testimonial adjsutments */
+
+    .testimonial p {
+        padding: 9rem 5rem;
+    }
+
+    /* FIXME: Testimonial adjsutments end */
+
+    /* TODO: Footer adjsutments */
+
+    .footer__logo {
+        width: fit-content;
+    }
+
+}
+
+@media screen and (min-width: 550px) {
+
+    /* TODO: Header adjustments */
+
+    .less__brightness {
+        width: 30vw;
+        
+    }
+    
+    .header__nav__bar__content {
+        
+        width: 70vw;
+    }
+    
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home ajdustments */
+
+    .home {
+        background-image: url(../images/medium.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .home__video__container {
+        height: 28rem;
+        background: url(../images/videoThumbnail.jpg);
+        background-position: 0 -200px;
+        background-repeat: no-repeat;
+        background-size: 100% 200%;
+        border-radius: 1rem;
+        max-width: 50rem;
+        margin-top: -2rem;
+        cursor: pointer;
+    }
+
+    .home__video__container:hover {
+        box-shadow: inset 0 -100px 40px 0 rgba(240, 78, 35, 0.5), inset 10px 0 40px 0 rgba(240, 78, 35, 0.5);
+    }
+
+    .home__h1 {
+        max-width: 20ch;
+    }
+
+    .video__clicked h2 {
+        font-size: 4rem;
+    }
+
+    /* FIXME: Home adjustments end */
+
+    /* TODO: Testimonial adjsutments */
+
+    .home__testimonial h2 {
+        font-size: 5rem;
+    }
+
+    /* FIXME: Testimonial adjustments end */
+
+    /* TODO: Footer ajdsutments */
+
+    .footer__logo .fa-fire {
+        font-size: 4rem;
+    }
+
+    /* FIXME: Footer adjsutments end */
+    
+}
+
+@media screen and (min-width: 700px) {
+
+    /* TODO: Header adjustments */
+
+    .less__brightness {
+        width: 40vw;
+        
+    }
+    
+    .header__nav__bar__content {
+        
+        width: 60vw;
+    }
+    
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home adjsutments */
+
+    .home__h1 {
+        font-size: 4rem;
+    }
+
+    /* FIXME: Home adjsutments end */
+
+    /* TODO: Testimonial adjsutments */
+
+    .testimonial p {
+        height: 48rem;
+    }
+
+    /* FIXME: Testimonial adjsutments end */
+    
+}
+
+@media screen and (min-width:800px) {
+
+    /* TODO: Home second adjustments */
+
+    .home__second {
+        flex-direction: row;
+        gap: 10rem;
+        padding: 6rem var(--horizontal-grobal-padding);
+    }
+
+    .home__second__square {
+        background: var(--second-color);
+        padding: 0 3rem;
+        align-self: center;
+        max-width: 48rem;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+    /* FIXME: Home second adjsutments end */
+
+    /* TODO: Home third adjsutments */
+
+    .home__third {
+        display: flex;
+    }
+
+    .home__third__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 1;
+        padding: 5rem;
+    }
+
+    .home__third__image {
+        flex: 1.2 1.2;
+        max-height: 40rem;
+    }
+
+    .home__third__image img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .home__third__content h2,
+    .home__third__content p {
+        font-size: 3.5rem;
+        font-weight: 550;
+    }
+    
+    /* FIXME: Home third adjsutments end */
+
+    /* TODO: Home fourth part adjustments */
+
+    .home__fourth__first__content p {
+        font-size: 4.4rem;
+        font-weight: bold;
+    }
+
+    .home__fourth__content p {
+        font-size: 2.5rem;
+    }
+
+    .home__fourth {
+        display: flex;
+    }
+
+    .home__fourth__content,
+    .home__fourth__first__content {
+        flex: 1 1;
+        padding: 8rem 5rem;
+    }
+
+    /* FIXME: Home fourth part adjsutments end */
+
+    /* TODO: Question adjustments */
+
+    .questions {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .question__h2__container h2 {
+        font-size: 4.5rem;
+    }
+
+    .questions__container {
+       width: 70rem;
+    } 
+
+    /* FIXME: Question adjsutments end */
+}
+
+@media screen and (min-width: 900px) {
+
+    /* TODO: Header adjustments */
+
+    .less__brightness {
+        width: 55vw;
+        
+    }
+    
+    .header__nav__bar__content {
+        
+        width: 45vw;
+    }
+    
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Home ajustments */
+
+    .video__clicked {
+        padding: 0 var(--horizontal-grobal-padding);
+    }
+
+    .video__clicked h2 {
+        font-size: 5rem;
+    }
+
+    /* FIXME: Home adjsutments end */
+
+    /* TODO: Home second adjustments */
+
+    .home__second__square {
+        aspect-ratio: 1/0.8;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* TODO: Header adjustments */
+
+    .less__brightness {
+        width: 60vw;
+        
+    }
+    
+    .header__nav__bar__content {
+        
+        width: 40vw;
+    }
+    
+    /* FIXME: Header adjustments end */
+
+    /* TODO: Question adjustments */
+
+    .questions__container {
+       width: 100rem;
+    } 
+
+    /* FIXME: QUestion adjsutments end */
+ 
+}
+
+@media screen and (min-width: 1280px) {
+
+
+    /* TODO: Setting up the project adjustments */
+
+    :root {
+        --horizontal-grobal-padding: 7%;
+    }
+
+    /* FIXME: Setting up the project adjustments end */
+
+    /* TODO: Header adjsutments */
+
+    .bars__container {
+        display: none;
+    }
+
+    .header__nav__bar__container {
+        position: initial;
+        height: initial;
+        z-index: initial;
+        transition: none;
+        width: 85%;
+        background: none;
+    }
+    
+    .header {
+        justify-content: initial; 
+        overflow: visible;
+        gap: 2rem;
+        padding-right: 2rem;
+    }
+
+    .less__brightness {
+        display: none;  
+    }
+    
+    .header__nav__bar__content {  
+        width: initial;
+        align-items: center;
+        width: 100%;
+        background: none;
+    }
+    
+    .mobile__item,
+    .mobile__button,
+    .close__nav__bar__container {
+        display: none;
+    } 
+    
+    .deskop__item {
+        display: initial;
+    }
+
+    .login__button {
+        display: inline-block;
+        background: var(--home-header-color);
+        color: var(--third-color);
+        border: .1rem solid var(--third-color);
+        border-radius: 0;
+        padding: 1.6rem 2.5rem;
+    }
+
+    .main__button {
+        border-radius: 0;
+    }
+
+    .header__nav__bar {
+        gap: 2.5rem;
+    }
+
+    /* FIXME: Header adjsutments end */
+
+    /* TODO: Home adjustments */
+
+    .home__video__container {
+        max-width: 45rem;
+    }
+
+    /* FIXME: Home adjustments end */
+
+    /* TODO: Home second adjsutments */
+
+    .home__second {
+        overflow: visible;
+        height: 25rem; 
+    }
+
+    .home__second__content {
+        padding: 0;
+        height: fit-content;
+    }
+
+    .home__second__square {
+        position: relative;
+        top: -17rem;
+        z-index: 100;
+        max-width: 60rem;
+        padding: 0 6rem;
+    }
+
+    /* FIXME: Home second adjsutments end */
+    
+}
+
+@media screen and (min-width: 1400px) {
+
+    /* TODO: Setting up the project adjustments */
+
+    :root {
+        --horizontal-grobal-padding: 10%;
+    }
+
+    /* FIXME: Setting up the project adjustments end */
+
+    /* TODO: Header adjsutments */
+
+    .header__nav__bar__container {
+        width: 87%;
+    }
+
+    /* FIXME: Header adjsutments end */
+
+    
+}
+
+@media screen and (min-width: 1500px) {
+
+    /* TODO: Setting up the project adjustments */
+
+    :root {
+        --horizontal-grobal-padding: 12%;
+    }
+
+    /* FIXME: Setting up the project adjustments end */
+
+    /* TODO: Header adjsutments */
+
+    .header__nav__bar__container {
+        width: 89%;
+    }
+
+    /* FIXME: Header adjsutments end */
+    
+}
+
+@media screen and (min-width: 1600px) {
+
+    /* TODO: Header adjsutments */
+
+    .header__nav__bar__container {
+        width: 90%;
+    }
+
+    /* FIXME: Header adjsutments end */
+    
+}
+
+@media screen and (min-width:1800px) {
+
+    /* TODO: Setting up the project adjustments */
+
+    :root {
+        --horizontal-grobal-padding: 16%;
+    }
+
+    /* FIXME: Setting up the project adjustments end */
+    
+}
+
+@media screen and (min-width:2100px) {
+
+    /* TODO: Home third adjustments */
+
+    .home__third__image {
+        flex: 1.15 1.15;
+    }
+
+    /* FIXME: Home third adjustments end */
+    
+}
+
+@media screen and (min-width: 2200px) {
+
+    /* TODO: Header adjsutments */
+
+    .header__nav__bar__container {
+        width: 92%;
+    }
+
+    /* FIXME: Header adjsutments end */
+}
